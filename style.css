@@ -22,7 +22,6 @@ header.cabeçalho {
     background-size: cover;
     background-position: center;
     padding: 50px 100px;
-    border: 1px solid black;
 }
 
 div.logo-menu {
@@ -43,8 +42,12 @@ nav.menu-nav a:hover {
     border-bottom: 2px solid var(--White);
 }
 
+a.icone-nav {
+    display: none;
+}
+
 h1.titulo-cabeçalho {
-    border: 1px solid white;
+    border: 2px solid white;
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
     color: white;
@@ -206,6 +209,135 @@ p.copy {
     font-size: 0.8rem;
     opacity: 0.5;
     margin-top: 50px;
+}
+
+@media screen and (max-width: 800px) {
+    header.cabeçalho {
+        background-image: url(images/mobile/image-hero.jpg);
+        padding: 50px 0px;
+        height: 700px;
+    }
+
+    nav.menu-nav {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid white;
+        position: absolute;
+        width: 100%;
+        height: 700px;
+        top: 0px;
+        background: url(images/logo.svg) no-repeat top 50px left 20px turquoise;
+    }
+
+   div.logo-menu img {
+        margin-left: 20px;
+    }
+
+    nav.menu-nav a {
+        margin-left: 40px;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-family: 'Josefin Sans', sans-serif;
+        margin-bottom: 20px;
+    }
+
+    nav.menu-nav a:hover {
+        border: none;
+        text-decoration: underline;
+
+    }
+
+    a.icone-nav {
+        display: block;
+        margin-right: 20px;
+    }
+
+    h1.titulo-cabeçalho {
+        width: 90%;
+        margin: 150px auto;
+        padding: 10px;
+
+    }
+
+    div.titulo-criações a {
+        position: absolute;
+        bottom: 20px;
+        left: 150px;
+    }
+
+    section.imagens-aumentadas {
+        flex-direction: column;
+        position: static;
+        padding: 20px;
+        margin-top: 50px;
+    }
+    div.imagem-aumentada {
+        width: 100%;
+        
+    }
+
+    div.interação {
+        position: static;
+        width: 100%;
+        padding: 50px 20px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    section.criações {
+        padding: 100px 20px;
+        position: relative;
+        margin-bottom: 50px;
+        padding-top: 0px;
+    }
+
+    div.titulo-criações {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    div.grid-imagens {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    footer.rodapé {
+        flex-direction: column;
+        padding: 50px 20px;
+        align-items: center;
+    }
+
+    div.logo-linksRodapé {
+        margin: auto;
+        text-align: center;
+    }
+
+    div.links-rodapé {
+        flex-direction: column;
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    div.links-rodapé a {
+        margin-bottom: 20px;
+    }
+
+    div.links-rodapé a:hover{
+        border: none;
+        text-decoration: underline;
+    }
+
+    div.copy-redes-sociais {
+        text-align: center;
+       
+    }
+
+    div.copy-redes-sociais a {
+        margin: 20px;
+    }
+
+    
 }
 
 
