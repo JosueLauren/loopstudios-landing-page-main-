@@ -42,8 +42,9 @@ nav.menu-nav a:hover {
     border-bottom: 2px solid var(--White);
 }
 
-a.icone-nav {
-    display: none;
+a.icon-hamburger, a.icon-close {
+    position: absolute;
+    top: -1000px;
 }
 
 h1.titulo-cabeçalho {
@@ -211,7 +212,7 @@ p.copy {
     margin-top: 50px;
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
     header.cabeçalho {
         background-image: url(images/mobile/image-hero.jpg);
         padding: 50px 0px;
@@ -220,6 +221,24 @@ p.copy {
 
     nav.menu-nav {
         display: none;
+    }
+
+    a.icon-hamburger {
+        display: block;
+        margin-right: 20px;
+        position: static;
+    }
+
+    a.icon-close {
+        display: none;
+        position: relative;
+        z-index: 1;
+        margin-right: 20px;
+        top: 0px;
+    }
+
+    nav.menu-mobile {
+        display: flex;
         flex-direction: column;
         justify-content: center;
         border: 1px solid white;
@@ -227,7 +246,7 @@ p.copy {
         width: 100%;
         height: 700px;
         top: 0px;
-        background: url(images/logo.svg) no-repeat top 50px left 20px turquoise;
+        background: url(images/logo.svg) no-repeat top 50px left 20px black;
     }
 
    div.logo-menu img {
@@ -248,10 +267,6 @@ p.copy {
 
     }
 
-    a.icone-nav {
-        display: block;
-        margin-right: 20px;
-    }
 
     h1.titulo-cabeçalho {
         width: 90%;

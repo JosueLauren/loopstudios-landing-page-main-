@@ -14,14 +14,15 @@
   <header class="cabeçalho">
    <div class="logo-menu">
     <img src="images/logo.svg" alt="logo">     
-    <nav class="menu-nav menu-mobile">
+    <nav class="menu-nav">
       <a href="#">About</a>
       <a href="#">Careers</a>
       <a href="#">Events</a>
       <a href="#">Products</a>
       <a href="#">Support</a>
     </nav>
-    <a class="icone-nav" href="#"><img src="images/icon-hamburger.svg" alt="icon-hamburger"></a>
+    <a class="icone-nav icon-hamburger" href="#"><img src="images/icon-hamburger.svg" alt="icon-hamburger"></a>
+    <a class="icone-nav icon-close" href="#"><img src="images/icon-close.svg" alt="icon-close"></a>
    </div>
    <h1 class="titulo-cabeçalho">Immersive experiences that deliver</h1>
   </header>
@@ -123,4 +124,22 @@
     </div>
   </footer>
 </body>
+<script>
+  document.querySelectorAll('.icone-nav').forEach(el => {
+    el.addEventListener('click', (e) => {
+    const nav = document.querySelector('.menu-nav ')
+        
+      if(e.target.getAttribute('alt') === 'icon-hamburger') {
+        nav.classList.add('menu-mobile')
+        document.querySelector('.icon-hamburger').style.display = 'none'
+        document.querySelector('.icon-close').style.display = 'block'
+      } else {
+        nav.classList.remove('menu-mobile')
+        document.querySelector('.icon-hamburger').style.display = 'block'
+        document.querySelector('.icon-close').style.display = 'none'
+      };
+  });
+  })
+
+</script>
 </html>
